@@ -10,6 +10,8 @@ interface DOMList {
 export default class ListTempate implements DOMList {
     ul: HTMLUListElement;
 
+    static instane: ListTempate = new ListTempate()
+
     private constructor() {
         this.ul = document.getElementById("listItems") as HTMLUListElement
     }
@@ -42,7 +44,18 @@ export default class ListTempate implements DOMList {
             label.textContent = item.item
             li.append(label)
 
-            
+            const button = document.createElement("button") as HTMLButtonElement
+            button.className = "button"
+            button.textContent = "X"
+            li.append(button)
+
+            button.addEventListener('click', () => {
+                fullList.removeItem(item.id)
+                this.render(fullList)
+
+            })
+
+            this.ul.append(li)
         })
     }
 }
