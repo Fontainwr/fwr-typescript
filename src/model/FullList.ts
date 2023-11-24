@@ -16,7 +16,7 @@ export default class FullList implements List {
 
     private constructor(private _list: ListItem[] = []){}
 
-    get List(): ListItem[] {
+    get list(): ListItem[] {
         return this._list
     }
 
