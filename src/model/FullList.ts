@@ -20,6 +20,13 @@ export default class FullList implements List {
         return this._list
     }
 
+    load(): void {
+        const storedList: string | null = localStorage.getItem("myList")
+        if (typeof storedList !== "string") return 
+
+        const parsedList: { _id:string, item: string, _checked: boolean }[] = JSON.parse(storedList) 
+    }
+
     save(): void {
         localStorage.setItem("myList", JSON.stringify(this._list))
     }
