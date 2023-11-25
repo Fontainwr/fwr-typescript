@@ -10,7 +10,7 @@ interface DOMList {
 export default class ListTempate implements DOMList {
     ul: HTMLUListElement;
 
-    static instane: ListTempate = new ListTempate()
+    static instance: ListTempate = new ListTempate()
 
     private constructor() {
         this.ul = document.getElementById("listItems") as HTMLUListElement
