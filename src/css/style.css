@@ -22,11 +22,12 @@ html {
 
 body {
     min-height: 100vh;
-    background-color: #333;
+    background-color: #040054;
     color: #fff;
     padding: 1rem;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Added box shadow */
 }
 
 main {
@@ -106,7 +107,6 @@ section {
     padding: 0.25em;
 }
 
-
 .listItems {
     flex-grow: 1;
     display: flex;
@@ -149,4 +149,10 @@ section {
     .newItemEntry__form {
         gap: 0.5rem;
     }
+}
+
+/* Added styles for glowing effect on the heading */
+h2 {
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8);
 }
