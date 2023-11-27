@@ -1,7 +1,7 @@
 import ListItem from "./ListItem";
 
 interface List {
-    List: ListItem[],
+    list: ListItem[],
     load(): void,
     save(): void,
     clearList(): void,
